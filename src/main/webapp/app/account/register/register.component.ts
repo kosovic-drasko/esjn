@@ -61,7 +61,9 @@ export class RegisterComponent implements AfterViewInit {
       );
     }
   }
-
+  previousState(): void {
+    window.history.back();
+  }
   private processError(response: HttpErrorResponse): void {
     if (response.status === 400 && response.error.type === LOGIN_ALREADY_USED_TYPE) {
       this.errorUserExists = true;
