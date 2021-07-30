@@ -1,8 +1,8 @@
 package tenderi.domain;
 
-import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDate;
+import javax.persistence.*;
 
 /**
  * A Ugovor.
@@ -19,111 +19,111 @@ public class UgovorPdf implements Serializable {
     private Long id;
 
     @Column(name = "broj_ugovora")
-    private String brojUgovora;
+    private String broj_ugovora;
 
     @Column(name = "datum_ugovora")
-    private LocalDate datumUgovora;
+    private LocalDate datum_ugovora;
 
     @Column(name = "predmet_ugovora")
-    private String predmetUgovora;
+    private String predmet_ugovora;
 
     @Column(name = "naziv_ponudjaca")
-    private String nazivPonudjaca;
+    private String naziv_ponudjaca;
 
     @Column(name = "broj_datum_tenderske_dokumntacije")
-    private String brojDatumTenderskeDokumntacije;
+    private String broj_datum_tenderske_dokumntacije;
 
     @Column(name = "broj_datum_odluke")
-    private String brojDatumOdluke;
+    private String broj_datum_odluke;
 
     @Column(name = "broj_datum_ponude")
-    private String brojDatumPonude;
+    private String broj_datum_ponude;
 
     @Column(name = "iznos_ugovora_bez_pdf")
-    private Integer iznosUgovoraBezPdf;
+    private Integer iznos_ugovora_bez_pdf;
 
     @Column(name = "sifra_postupka")
-    private Integer sifraPostupka;
+    private Integer sifra_postupka;
 
     @Column(name = "sifra_ponude")
-    private Integer sifraPonude;
+    private Integer sifra_ponude;
 
     @Column(name = "odgovorno_lice")
-    private String odgovornoLice;
+    private String odgovorno_lice;
 
     @Column(name = "adresa_ponudjaca")
-    private String adresaPonudjaca;
+    private String adresa_ponudjaca;
 
     @Column(name = "banka_racun")
-    private String bankaRacun;
+    private String banka_racun;
 
     @Column(name = "datum_objave")
-    private LocalDate datumObjave;
-
-    public LocalDate getDatumObjave() {
-        return datumObjave;
-    }
+    private LocalDate datum_objave;
 
     @Column(name = "vrsta_postupka")
-    private String vrstaPostupka;
+    private String vrsta_postupkaa;
 
     public Long getId() {
         return id;
     }
 
-    public String getBrojUgovora() {
-        return brojUgovora;
+    public String getBroj_ugovora() {
+        return broj_ugovora;
     }
 
-    public LocalDate getDatumUgovora() {
-        return datumUgovora;
+    public LocalDate getDatum_ugovora() {
+        return datum_ugovora;
     }
 
-    public String getPredmetUgovora() {
-        return predmetUgovora;
+    public String getPredmet_ugovora() {
+        return predmet_ugovora;
     }
 
-    public String getNazivPonudjaca() {
-        return nazivPonudjaca;
+    public String getNaziv_ponudjaca() {
+        return naziv_ponudjaca;
     }
 
-    public String getBrojDatumTenderskeDokumntacije() {
-        return brojDatumTenderskeDokumntacije;
+    public String getBroj_datum_tenderske_dokumntacije() {
+        return broj_datum_tenderske_dokumntacije;
     }
 
-    public String getBrojDatumOdlukeIzbora() {
-        return brojDatumOdluke;
+    public String getBroj_datum_odluke() {
+        return broj_datum_odluke;
     }
 
-    public String getBrojDatumPonude() {
-        return brojDatumPonude;
+    public String getBroj_datum_ponude() {
+        return broj_datum_ponude;
     }
 
-    public Integer getIznosUgovoraBezPdf() {
-        return iznosUgovoraBezPdf;
+    public Integer getIznos_ugovora_bez_pdf() {
+        return iznos_ugovora_bez_pdf;
     }
 
-    public Integer getSifraPostupka() {
-        return sifraPostupka;
+    public Integer getSifra_postupka() {
+        return sifra_postupka;
     }
 
-    public Integer getSifraPonude() {
-        return sifraPonude;
+    public Integer getSifra_ponude() {
+        return sifra_ponude;
     }
 
-    public String getOdgovornoLice() {
-        return odgovornoLice;
+    public String getOdgovorno_lice() {
+        return odgovorno_lice;
     }
 
-    public String getAdresaPonudjaca() {
-        return adresaPonudjaca;
+    public String getAdresa_ponudjaca() {
+        return adresa_ponudjaca;
     }
 
-    public String getBankaRacun() {
-        return bankaRacun;
+    public String getBanka_racun() {
+        return banka_racun;
     }
 
-    public String getVrstaPostupka() {
-        return vrstaPostupka;
+    public LocalDate getDatum_objave() {
+        return datum_objave;
+    }
+
+    public String getVrsta_postupkaa() {
+        return vrsta_postupkaa;
     }
 }

@@ -1,5 +1,10 @@
 package tenderi.web.rest;
 
+import java.io.InputStream;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import javax.servlet.http.HttpServletResponse;
 import net.sf.jasperreports.engine.*;
 import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
 import net.sf.jasperreports.engine.export.ooxml.JRDocxExporter;
@@ -14,12 +19,6 @@ import tenderi.domain.Anex;
 import tenderi.domain.Postupci;
 import tenderi.repository.AnexRepository;
 import tenderi.repository.PostupciRepository;
-
-import javax.servlet.http.HttpServletResponse;
-import java.io.InputStream;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 @CrossOrigin(origins = ("*"))
 @RestController
@@ -37,7 +36,7 @@ public class PrvorangiraniPdf {
 
     @GetMapping(path = "/prvorangirani")
     @ResponseBody
-    public void getPdfUgovor(HttpServletResponse response, @RequestParam Integer sifraPostupka, @RequestParam Integer sifraPonude)
+    public void getPdfUgovor(HttpServletResponse response, @RequestParam Integer sifra_postupka, @RequestParam Integer sifra_ponude)
         throws Exception {
         Resource resource = context.getResource("classpath:reports/ReportAnex.jrxml");
         InputStream inputStream = resource.getInputStream();
@@ -45,7 +44,7 @@ public class PrvorangiraniPdf {
 
         Map<String, Object> params = new HashMap<>();
 
-        List<Anex> anex = anexRepository.findBySifraPostupkaAndSifraPonude(sifraPostupka, sifraPonude);
+        List<Anex> anex = anexRepository.findBySifra_postupkaAndSifra_ponude(sifra_postupka, sifra_ponude);
 
         //Data source Set
         JRDataSource dataSource = new JRBeanCollectionDataSource(anex);

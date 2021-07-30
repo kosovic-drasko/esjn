@@ -1,11 +1,10 @@
 package tenderi.domain;
 
-import org.hibernate.annotations.Cache;
-import org.hibernate.annotations.CacheConcurrencyStrategy;
-
-import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDate;
+import javax.persistence.*;
+import org.hibernate.annotations.Cache;
+import org.hibernate.annotations.CacheConcurrencyStrategy;
 
 /**
  * A Prvorangirani.
@@ -23,13 +22,13 @@ public class Anex implements Serializable {
     private Long id;
 
     @Column(name = "sifra_postupka")
-    private Integer sifraPostupka;
+    private Integer sifra_postupka;
 
     @Column(name = "sifra_ponude")
-    private Integer sifraPonude;
+    private Integer sifra_ponude;
 
     @Column(name = "broj_partije")
-    private Integer brojPartije;
+    private Integer broj_partije;
 
     @Column(name = "atc")
     private String atc;
@@ -38,67 +37,55 @@ public class Anex implements Serializable {
     private String inn;
 
     @Column(name = "zasticeni_naziv")
-    private String zasticeniNaziv;
+    private String zasticeni_naziv;
 
     @Column(name = "farmaceutski_oblik_lijeka")
-    private String farmaceutskiOblikLijeka;
+    private String farmaceutski_oblik_lijeka;
 
     @Column(name = "jacina_lijeka")
-    private String jacinaLijeka;
+    private String jacina_lijeka;
 
     @Column(name = "pakovanje")
     private String pakovanje;
 
     @Column(name = "trazena_kolicina")
-    private Integer trazenaKolicina;
+    private Integer trazena_kolicina;
 
     @Column(name = "procijenjena_vrijednost")
-    private Double procijenjenaVrijednost;
+    private Double procijenjena_vrijednost;
 
     @Column(name = "ponudjena_vrijednost")
-    private Double ponudjenaVrijednost;
+    private Double ponudjena_vrijednost;
 
     @Column(name = "rok_isporuke")
-    private Integer rokIsporuke;
+    private Integer rok_isporuke;
 
     @Column(name = "naziv_ponudjaca")
-    private String nazivPonudjaca;
+    private String naziv_ponudjaca;
 
     @Column(name = "naziv_proizvodjaca")
-    private String nazivProizvodjaca;
+    private String naziv_proizvodjaca;
 
     @Column(name = "broj_ugovora")
-    private String brojUgovora;
+    private String broj_ugovora;
 
     @Column(name = "datum_ugovora")
-    private LocalDate datumUgovora;
-
-    public String getNazivPonudjaca() {
-        return nazivPonudjaca;
-    }
-
-    public String getBrojUgovora() {
-        return brojUgovora;
-    }
-
-    public LocalDate getDatumUgovora() {
-        return datumUgovora;
-    }
+    private LocalDate datum_ugovora;
 
     public Long getId() {
         return id;
     }
 
-    public Integer getSifraPostupka() {
-        return sifraPostupka;
+    public Integer getSifra_postupka() {
+        return sifra_postupka;
     }
 
-    public Integer getSifraPonude() {
-        return sifraPonude;
+    public Integer getSifra_ponude() {
+        return sifra_ponude;
     }
 
-    public Integer getBrojPartije() {
-        return brojPartije;
+    public Integer getBroj_partije() {
+        return broj_partije;
     }
 
     public String getAtc() {
@@ -109,35 +96,51 @@ public class Anex implements Serializable {
         return inn;
     }
 
-    public String getZastceniNaziv() {
-        return zasticeniNaziv;
+    public String getZasticeni_naziv() {
+        return zasticeni_naziv;
     }
 
-    public String getFarmaceutskiOblikLijeka() {
-        return farmaceutskiOblikLijeka;
+    public String getFarmaceutski_oblik_lijeka() {
+        return farmaceutski_oblik_lijeka;
     }
 
-    public String getJacinaLijeka() {
-        return jacinaLijeka;
+    public String getJacina_lijeka() {
+        return jacina_lijeka;
     }
 
     public String getPakovanje() {
         return pakovanje;
     }
 
-    public Integer getTrazenaKolicina() {
-        return trazenaKolicina;
+    public Integer getTrazena_kolicina() {
+        return trazena_kolicina;
     }
 
-    public Double getProcijenjenaVrijednost() {
-        return procijenjenaVrijednost;
+    public Double getProcijenjena_vrijednost() {
+        return procijenjena_vrijednost;
     }
 
-    public Double getPonudjenaVrijednost() {
-        return ponudjenaVrijednost;
+    public Double getPonudjena_vrijednost() {
+        return ponudjena_vrijednost;
     }
 
-    public Integer getRokIsporuke() {
-        return rokIsporuke;
+    public Integer getRok_isporuke() {
+        return rok_isporuke;
+    }
+
+    public String getNaziv_ponudjaca() {
+        return naziv_ponudjaca;
+    }
+
+    public String getNaziv_proizvodjaca() {
+        return naziv_proizvodjaca;
+    }
+
+    public String getBroj_ugovora() {
+        return broj_ugovora;
+    }
+
+    public LocalDate getDatum_ugovora() {
+        return datum_ugovora;
     }
 }
