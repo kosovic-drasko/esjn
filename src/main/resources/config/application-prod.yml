@@ -47,8 +47,9 @@ spring:
   mail:
     host: smtp.mailgun.org
     port: 587
-    username: postmaster@sandboxf7669cbcfc8447b19a38b3e89acdbe67.mailgun.org #Replace this field with your Gmail username.
-    password: a207552d1433af096c654ecfc421a634-e31dc3cc-62632eb1 #Replace this field with your Gmail password/App password.
+
+    username: postmaster@sandbox34888fac667a43c392427cd0c9c67a37.mailgun.org #Replace this field with your Gmail username.
+    password: 56adb4f9f264eae8c0eb0328d2379089-a0cfb957-441e8fa4 #Replace this field with your Gmail password/App password.
     protocol: smtp
   thymeleaf:
     cache: true
