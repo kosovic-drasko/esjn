@@ -66,8 +66,15 @@ public class Anex implements Serializable {
     @Column(name = "naziv_proizvodjaca")
     private String naziv_proizvodjaca;
 
+    public String getJedinica_mjere() {
+        return jedinica_mjere;
+    }
+
     @Column(name = "broj_ugovora")
     private String broj_ugovora;
+
+    @Column(name = "jedinica_mjere")
+    private String jedinica_mjere;
 
     @Column(name = "datum_ugovora")
     private LocalDate datum_ugovora;

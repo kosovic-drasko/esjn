@@ -21,11 +21,30 @@ public class UgovorPdf implements Serializable {
     @Column(name = "broj_ugovora")
     private String broj_ugovora;
 
+    public String getBroj_tendera() {
+        return broj_tendera;
+    }
+
+    @Column(name = "broj_tendera")
+    private String broj_tendera;
+
+    @Column(name = "broj_odluke")
+    private String broj_odluke;
+
     @Column(name = "datum_ugovora")
     private LocalDate datum_ugovora;
 
+    @Column(name = "datum_ponude")
+    private LocalDate datum_ponude;
+
+    @Column(name = "datum_odluke")
+    private LocalDate datum_odluke;
+
     @Column(name = "predmet_ugovora")
     private String predmet_ugovora;
+
+    @Column(name = "naziv")
+    private String naziv;
 
     @Column(name = "naziv_ponudjaca")
     private String naziv_ponudjaca;
@@ -51,20 +70,37 @@ public class UgovorPdf implements Serializable {
     @Column(name = "odgovorno_lice")
     private String odgovorno_lice;
 
+    @Column(name = "odgovorno_lice_narucioca")
+    private String odgovorno_lice_narucioca;
+
+    @Column(name = "adresa")
+    private String adresa;
+
     @Column(name = "adresa_ponudjaca")
     private String adresa_ponudjaca;
 
     @Column(name = "banka_racun")
     private String banka_racun;
 
+    @Column(name = "racun")
+    private String racun;
+
     @Column(name = "datum_objave")
     private LocalDate datum_objave;
 
     @Column(name = "vrsta_postupka")
-    private String vrsta_postupkaa;
+    private String vrsta_postupka;
 
     public Long getId() {
         return id;
+    }
+
+    public LocalDate getDatum_odluke() {
+        return datum_odluke;
+    }
+
+    public LocalDate getDatum_ponude() {
+        return datum_ponude;
     }
 
     public String getBroj_ugovora() {
@@ -79,12 +115,32 @@ public class UgovorPdf implements Serializable {
         return predmet_ugovora;
     }
 
+    public String getAdresa() {
+        return adresa;
+    }
+
+    public String getRacun() {
+        return racun;
+    }
+
     public String getNaziv_ponudjaca() {
         return naziv_ponudjaca;
     }
 
+    public String getBroj_odluke() {
+        return broj_odluke;
+    }
+
     public String getBroj_datum_tenderske_dokumntacije() {
         return broj_datum_tenderske_dokumntacije;
+    }
+
+    public String getNaziv() {
+        return naziv;
+    }
+
+    public String getOdgovorno_lice_narucioca() {
+        return odgovorno_lice_narucioca;
     }
 
     public String getBroj_datum_odluke() {
@@ -123,7 +179,7 @@ public class UgovorPdf implements Serializable {
         return datum_objave;
     }
 
-    public String getVrsta_postupkaa() {
-        return vrsta_postupkaa;
+    public String getVrsta_postupka() {
+        return vrsta_postupka;
     }
 }

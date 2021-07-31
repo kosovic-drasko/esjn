@@ -44,7 +44,7 @@ public class PrvorangiraniPdf {
 
         Map<String, Object> params = new HashMap<>();
 
-        List<Anex> anex = anexRepository.findBySifra_postupkaAndSifra_ponude(sifra_postupka, sifra_ponude);
+        List<Anex> anex = anexRepository.findSifreAnex(sifra_postupka, sifra_ponude);
 
         //Data source Set
         JRDataSource dataSource = new JRBeanCollectionDataSource(anex);

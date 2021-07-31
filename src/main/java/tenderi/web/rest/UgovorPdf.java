@@ -1,5 +1,10 @@
 package tenderi.web.rest;
 
+import java.io.InputStream;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import javax.servlet.http.HttpServletResponse;
 import net.sf.jasperreports.engine.*;
 import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
 import net.sf.jasperreports.engine.export.ooxml.JRDocxExporter;
@@ -12,12 +17,6 @@ import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 import tenderi.repository.UgovorPdfRepository;
 
-import javax.servlet.http.HttpServletResponse;
-import java.io.InputStream;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 @CrossOrigin(origins = ("*"))
 @RestController
 @RequestMapping("api/report")
@@ -29,14 +28,14 @@ public class UgovorPdf {
     @Autowired
     UgovorPdfRepository ugovorPdfRepository;
 
-    @GetMapping(path = "/ugovor/{brojUgovora}")
+    @GetMapping(path = "/ugovor/{broj_ugovora}")
     @ResponseBody
-    public void getPdfUgovor(HttpServletResponse response, @PathVariable String brojUgovora) throws Exception {
+    public void getPdfUgovor(HttpServletResponse response, @PathVariable String broj_ugovora) throws Exception {
         Resource resource = context.getResource("classpath:reports/ReportUgovor.jrxml");
         InputStream inputStream = resource.getInputStream();
         JasperReport report = JasperCompileManager.compileReport(inputStream);
         Map<String, Object> params = new HashMap<>();
-        List<tenderi.domain.UgovorPdf> ugovor = ugovorPdfRepository.findUgovorPdfByBrojUgovora(brojUgovora);
+        List<tenderi.domain.UgovorPdf> ugovor = ugovorPdfRepository.findBrojUgovora(broj_ugovora);
         //Data source Set
         JRDataSource dataSource = new JRBeanCollectionDataSource(ugovor);
         params.put("datasource", dataSource);
@@ -48,25 +47,24 @@ public class UgovorPdf {
         //Export PDF Stream
         JasperExportManager.exportReportToPdfStream(jasperPrint, response.getOutputStream());
     }
-
-    @GetMapping(path = "/ugovor-docx/{brojUgovora}")
-    @ResponseBody
-    public void getDocxUgovor(HttpServletResponse response, @PathVariable String brojUgovora) throws Exception {
-        Resource resource = context.getResource("classpath:reports/ReportUgovorDocx.jrxml");
-        InputStream inputStream = resource.getInputStream();
-        JasperReport report = JasperCompileManager.compileReport(inputStream);
-        Map<String, Object> params = new HashMap<>();
-        List<tenderi.domain.UgovorPdf> ugovor = ugovorPdfRepository.findUgovorPdfByBrojUgovora(brojUgovora);
-        //Data source Set
-        JRDataSource dataSource = new JRBeanCollectionDataSource(ugovor);
-        params.put("datasource", dataSource);
-
-        JasperPrint jasperPrint = JasperFillManager.fillReport(report, params, dataSource);
-        JRDocxExporter export = new JRDocxExporter();
-        export.setExporterInput(new SimpleExporterInput(jasperPrint));
-        export.setExporterOutput(new SimpleOutputStreamExporterOutput(response.getOutputStream()));
-        response.setHeader("Content-Disposition", "attachment;filename=jasperfile.docx");
-        response.setContentType("application/octet-stream");
-        export.exportReport();
-    }
+    //    @GetMapping(path = "/ugovor-docx/{brojUgovora}")
+    //    @ResponseBody
+    //    public void getDocxUgovor(HttpServletResponse response, @PathVariable String brojUgovora) throws Exception {
+    //        Resource resource = context.getResource("classpath:reports/ReportUgovorDocx.jrxml");
+    //        InputStream inputStream = resource.getInputStream();
+    //        JasperReport report = JasperCompileManager.compileReport(inputStream);
+    //        Map<String, Object> params = new HashMap<>();
+    //        List<tenderi.domain.UgovorPdf> ugovor = ugovorPdfRepository.findUgovorPdfByBrojUgovora(brojUgovora);
+    //        //Data source Set
+    //        JRDataSource dataSource = new JRBeanCollectionDataSource(ugovor);
+    //        params.put("datasource", dataSource);
+    //
+    //        JasperPrint jasperPrint = JasperFillManager.fillReport(report, params, dataSource);
+    //        JRDocxExporter export = new JRDocxExporter();
+    //        export.setExporterInput(new SimpleExporterInput(jasperPrint));
+    //        export.setExporterOutput(new SimpleOutputStreamExporterOutput(response.getOutputStream()));
+    //        response.setHeader("Content-Disposition", "attachment;filename=jasperfile.docx");
+    //        response.setContentType("application/octet-stream");
+    //        export.exportReport();
+    //    }
 }

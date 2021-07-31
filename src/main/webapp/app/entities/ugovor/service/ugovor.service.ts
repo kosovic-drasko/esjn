@@ -42,21 +42,24 @@ export class UgovorService {
   ponudjaciAll(): any {
     return this.http.get<IPonude[]>(this.resourceUrl);
   }
-  getPrvorangiraniPonude(sifraPostupka: number, sifraPonude: number): Observable<IPonude[]> {
+  getPrvorangiraniPonude(sifra_postupka: number, sifra_ponude: number): Observable<IPonude[]> {
     const params = new HttpParams();
-    params.set('sifraPostupka', String(sifraPostupka));
-    params.set('sifraPonude', String(sifraPonude));
+    params.set('sifra_postupka', String(sifra_postupka));
+    params.set('sifra_ponude', String(sifra_ponude));
 
-    return this.http.get<IPonude[]>(`${this.resourceUrlPostupakPonudeeUgovor}?sifraPostupka=${sifraPostupka}&sifraPonude=${sifraPonude}`, {
-      params,
-    });
+    return this.http.get<IPonude[]>(
+      `${this.resourceUrlPostupakPonudeeUgovor}?sifra_postupka=${sifra_postupka}&sifra_ponude=${sifra_ponude}`,
+      {
+        params,
+      }
+    );
   }
-  printReportAnexiUgovor(sifraPostupka: number, sifraPonude: number): any {
+  printReportAnexiUgovor(sifra_postupka: number, sifra_ponude: number): any {
     const params = new HttpParams();
-    params.set('sifraPostupka', String(sifraPostupka));
-    params.set('sifraPonude', String(sifraPonude));
+    params.set('sifra_postupka', String(sifra_postupka));
+    params.set('sifra_ponude', String(sifra_ponude));
 
-    return this.http.get<IPonude[]>(`${this.resourceUrlPdfPrvorangirani}?sifraPostupka=${sifraPostupka}&sifraPonude=${sifraPonude}`, {
+    return this.http.get<IPonude[]>(`${this.resourceUrlPdfPrvorangirani}?sifra_postupka=${sifra_postupka}&sifra_ponude=${sifra_ponude}`, {
       params,
       responseType: 'arraybuffer' as 'json',
     });

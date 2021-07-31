@@ -1,75 +1,107 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 6.17.0-6d93193241dd8cc42629e188b94f9e0bc5722efd  -->
+<!-- Created with Jaspersoft Studio version 6.12.2.final using JasperReports Library version 6.12.2-75c5e90a222ab406e416cbf590a5397028a52de3  -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="PrimjerUgovora" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ecb7461a-a61e-43cc-962e-9877fe579f3d">
     <property name="com.jaspersoft.studio.data.sql.tables" value=""/>
-    <property name="com.jaspersoft.studio.data.defaultdataadapter" value="DataAdapter ESJN.xml"/>
+    <property name="com.jaspersoft.studio.data.defaultdataadapter" value="DataAdapterMont.xml"/>
     <property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w1" value="338"/>
     <property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w2" value="648"/>
     <queryString language="SQL">
         <![CDATA[select * from  view_ugovor]]>
     </queryString>
-    <field name="brojUgovora" class="java.lang.String">
-        <property name="com.jaspersoft.studio.field.label" value="brojUgovora"/>
+    <field name="odgovorno_lice" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="odgovorno_lice"/>
         <property name="com.jaspersoft.studio.field.tree.path" value="view_ugovor"/>
-        <property name="com.jaspersoft.studio.field.name" value="brojUgovora"/>
     </field>
-    <field name="datumUgovora" class="java.time.LocalDate">
-        <property name="com.jaspersoft.studio.field.label" value="datumUgovora"/>
+    <field name="adresa_ponudjaca" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="adresa_ponudjaca"/>
         <property name="com.jaspersoft.studio.field.tree.path" value="view_ugovor"/>
-        <property name="com.jaspersoft.studio.field.name" value="datumUgovora"/>
     </field>
-    <field name="predmetUgovora" class="java.lang.String">
-        <property name="com.jaspersoft.studio.field.label" value="predmetUgovora"/>
+    <field name="banka_racun" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="banka_racun"/>
         <property name="com.jaspersoft.studio.field.tree.path" value="view_ugovor"/>
-        <property name="com.jaspersoft.studio.field.name" value="predmetUgovora"/>
     </field>
-    <field name="brojDatumTenderskeDokumntacije" class="java.lang.String">
-        <property name="com.jaspersoft.studio.field.label" value="brojDatumTenderskeDokumntacije"/>
+    <field name="datum_objave" class="java.time.LocalDate">
+        <property name="com.jaspersoft.studio.field.label" value="datum_objave"/>
         <property name="com.jaspersoft.studio.field.tree.path" value="view_ugovor"/>
-        <property name="com.jaspersoft.studio.field.name" value="brojDatumTenderskeDokumntacije"/>
     </field>
-    <field name="brojDatumOdlukeIzbora" class="java.lang.String">
-        <property name="com.jaspersoft.studio.field.label" value="brojDatumOdlukeIzbora"/>
+    <field name="vrsta_postupka" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="vrsta_postupka"/>
         <property name="com.jaspersoft.studio.field.tree.path" value="view_ugovor"/>
-        <property name="com.jaspersoft.studio.field.name" value="brojDatumOdlukeIzbora"/>
     </field>
-    <field name="brojDatumPonude" class="java.lang.String">
-        <property name="com.jaspersoft.studio.field.label" value="brojDatumPonude"/>
+    <field name="id" class="java.lang.Long">
+        <property name="com.jaspersoft.studio.field.label" value="id"/>
         <property name="com.jaspersoft.studio.field.tree.path" value="view_ugovor"/>
-        <property name="com.jaspersoft.studio.field.name" value="brojDatumPonude"/>
     </field>
-    <field name="iznosUgovoraBezPdf" class="java.lang.Integer">
-        <property name="com.jaspersoft.studio.field.label" value="iznosUgovoraBezPdf"/>
+    <field name="broj_ugovora" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="broj_ugovora"/>
         <property name="com.jaspersoft.studio.field.tree.path" value="view_ugovor"/>
-        <property name="com.jaspersoft.studio.field.name" value="iznosUgovoraBezPdf"/>
     </field>
-    <field name="sifraPostupka" class="java.lang.Integer">
-        <property name="com.jaspersoft.studio.field.label" value="sifraPostupka"/>
+    <field name="broj_odluke" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="broj_odluke"/>
         <property name="com.jaspersoft.studio.field.tree.path" value="view_ugovor"/>
-        <property name="com.jaspersoft.studio.field.name" value="sifraPostupka"/>
     </field>
-    <field name="sifraPonude" class="java.lang.Integer">
-        <property name="com.jaspersoft.studio.field.label" value="sifraPonude"/>
+    <field name="datum_odluke" class="java.time.LocalDate">
+        <property name="com.jaspersoft.studio.field.label" value="datum_odluke"/>
         <property name="com.jaspersoft.studio.field.tree.path" value="view_ugovor"/>
-        <property name="com.jaspersoft.studio.field.name" value="sifraPonude"/>
     </field>
-    <field name="odgovornoLice" class="java.lang.String">
-        <property name="com.jaspersoft.studio.field.label" value="odgovornoLice"/>
+    <field name="datum_ugovora" class="java.time.LocalDate">
+        <property name="com.jaspersoft.studio.field.label" value="datum_ugovora"/>
         <property name="com.jaspersoft.studio.field.tree.path" value="view_ugovor"/>
-        <property name="com.jaspersoft.studio.field.name" value="odgovornoLice"/>
     </field>
-    <field name="adresaPonudjaca" class="java.lang.String">
-        <property name="com.jaspersoft.studio.field.label" value="adresaPonudjaca"/>
+    <field name="iznos_ugovora_bez_pdf" class="java.lang.Integer">
+        <property name="com.jaspersoft.studio.field.label" value="iznos_ugovora_bez_pdf"/>
         <property name="com.jaspersoft.studio.field.tree.path" value="view_ugovor"/>
-        <property name="com.jaspersoft.studio.field.name" value="adresaPonudjaca"/>
     </field>
-    <field name="bankaRacun" class="java.lang.String">
-        <property name="com.jaspersoft.studio.field.label" value="bankaRacun"/>
+    <field name="sifra_postupka" class="java.lang.Integer">
+        <property name="com.jaspersoft.studio.field.label" value="sifra_postupka"/>
         <property name="com.jaspersoft.studio.field.tree.path" value="view_ugovor"/>
-        <property name="com.jaspersoft.studio.field.name" value="bankaRacun"/>
     </field>
-    <field name="datumObjave" class="java.time.LocalDate">
-        <property name="com.jaspersoft.studio.field.label" value="datumObjave"/>
+    <field name="sifra_ponude" class="java.lang.Integer">
+        <property name="com.jaspersoft.studio.field.label" value="sifra_ponude"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="view_ugovor"/>
+    </field>
+    <field name="naziv_ponudjaca" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="naziv_ponudjaca"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="view_ugovor"/>
+    </field>
+    <field name="datum_ponude" class="java.time.LocalDate">
+        <property name="com.jaspersoft.studio.field.label" value="datum_ponude"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="view_ugovor"/>
+    </field>
+    <field name="broj_tendera" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="broj_tendera"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="view_ugovor"/>
+    </field>
+    <field name="predmet_ugovora" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="predmet_ugovora"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="view_ugovor"/>
+    </field>
+    <field name="broj_datum_odluke" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="broj_datum_odluke"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="view_ugovor"/>
+    </field>
+    <field name="broj_datum_ponude" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="broj_datum_ponude"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="view_ugovor"/>
+    </field>
+    <field name="broj_datum_tenderske_dokumntacije" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="broj_datum_tenderske_dokumntacije"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="view_ugovor"/>
+    </field>
+    <field name="naziv" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="naziv"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="view_ugovor"/>
+    </field>
+    <field name="adresa" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="adresa"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="view_ugovor"/>
+    </field>
+    <field name="racun" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="racun"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="view_ugovor"/>
+    </field>
+    <field name="odgovorno_lice_narucioca" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="odgovorno_lice_narucioca"/>
         <property name="com.jaspersoft.studio.field.tree.path" value="view_ugovor"/>
     </field>
     <background>
@@ -150,7 +182,7 @@ Roba mora biti u paletama pakovanja sledećih dimenzija: dužina 120 cm, širina
                     <property name="com.jaspersoft.studio.unit.height" value="px"/>
                     <property name="com.jaspersoft.studio.unit.y" value="px"/>
                 </reportElement>
-                <textFieldExpression><![CDATA[$F{brojUgovora}]]></textFieldExpression>
+                <textFieldExpression><![CDATA[$F{broj_ugovora}]]></textFieldExpression>
             </textField>
             <textField>
                 <reportElement x="330" y="160" width="220" height="15" uuid="4dc58d72-2468-479b-977c-d29b7c6d1f62">
@@ -158,82 +190,83 @@ Roba mora biti u paletama pakovanja sledećih dimenzija: dužina 120 cm, širina
                     <property name="com.jaspersoft.studio.unit.y" value="px"/>
                     <property name="com.jaspersoft.studio.unit.width" value="px"/>
                 </reportElement>
-                <textFieldExpression><![CDATA[$F{bankaRacun}]]></textFieldExpression>
+                <textFieldExpression><![CDATA[$F{racun}]]></textFieldExpression>
             </textField>
             <textField>
                 <reportElement x="180" y="172" width="120" height="15" uuid="5cda5c8e-6788-4b55-a19a-d53b63c45266">
                     <property name="com.jaspersoft.studio.unit.height" value="px"/>
                     <property name="com.jaspersoft.studio.unit.y" value="px"/>
                 </reportElement>
-                <textFieldExpression><![CDATA[$F{odgovornoLice}]]></textFieldExpression>
+                <textFieldExpression><![CDATA[$F{odgovorno_lice_narucioca}]]></textFieldExpression>
             </textField>
             <textField>
                 <reportElement x="380" y="300" width="164" height="15" uuid="12d0fa1d-6c7b-4cc2-92f8-4e27a826e030">
                     <property name="com.jaspersoft.studio.unit.height" value="px"/>
                     <property name="com.jaspersoft.studio.unit.y" value="px"/>
                 </reportElement>
-                <textFieldExpression><![CDATA[$F{brojDatumTenderskeDokumntacije}]]></textFieldExpression>
+                <textFieldExpression><![CDATA[$F{broj_datum_tenderske_dokumntacije}]]></textFieldExpression>
             </textField>
             <textField>
                 <reportElement x="280" y="312" width="165" height="15" uuid="752ca186-8127-4b4f-8f68-231a5b397e9e">
                     <property name="com.jaspersoft.studio.unit.y" value="px"/>
                 </reportElement>
-                <textFieldExpression><![CDATA[$F{brojDatumOdlukeIzbora}]]></textFieldExpression>
+                <textFieldExpression><![CDATA[$F{broj_datum_odluke}]]></textFieldExpression>
             </textField>
             <textField>
-                <reportElement x="110" y="323" width="80" height="15" uuid="dbcd3932-d858-4af6-aea0-dc5989571930">
+                <reportElement x="102" y="323" width="88" height="15" uuid="dbcd3932-d858-4af6-aea0-dc5989571930">
                     <property name="com.jaspersoft.studio.unit.height" value="px"/>
                     <property name="com.jaspersoft.studio.unit.y" value="px"/>
                 </reportElement>
+                <textFieldExpression><![CDATA[$F{naziv_ponudjaca}]]></textFieldExpression>
             </textField>
             <textField>
                 <reportElement x="210" y="323" width="115" height="15" uuid="8743acd5-ce56-472d-912a-80fbafd52737">
                     <property name="com.jaspersoft.studio.unit.height" value="px"/>
                     <property name="com.jaspersoft.studio.unit.y" value="px"/>
                 </reportElement>
-                <textFieldExpression><![CDATA[$F{brojDatumPonude}]]></textFieldExpression>
+                <textFieldExpression><![CDATA[$F{broj_datum_ponude}]]></textFieldExpression>
             </textField>
             <textField>
                 <reportElement x="200" y="416" width="70" height="15" uuid="b8de104f-b694-4b56-9d31-ecfa7fecf8b9">
                     <property name="com.jaspersoft.studio.unit.height" value="px"/>
                     <property name="com.jaspersoft.studio.unit.y" value="px"/>
                 </reportElement>
-                <textFieldExpression><![CDATA[$F{brojDatumPonude}]]></textFieldExpression>
+                <textFieldExpression><![CDATA[$F{datum_ponude}]]></textFieldExpression>
             </textField>
             <textField>
                 <reportElement x="170" y="428" width="90" height="15" uuid="bf3ed294-e1e3-4f88-8537-da7f6171e450">
                     <property name="com.jaspersoft.studio.unit.height" value="px"/>
                     <property name="com.jaspersoft.studio.unit.y" value="px"/>
                 </reportElement>
-                <textFieldExpression><![CDATA[$F{brojDatumTenderskeDokumntacije}]]></textFieldExpression>
+                <textFieldExpression><![CDATA[$F{broj_datum_tenderske_dokumntacije}]]></textFieldExpression>
             </textField>
             <textField>
                 <reportElement x="250" y="452" width="215" height="15" uuid="63fe0fdb-5997-4c37-aa50-04b11ddf93c5">
                     <property name="com.jaspersoft.studio.unit.height" value="px"/>
                     <property name="com.jaspersoft.studio.unit.y" value="px"/>
                 </reportElement>
-                <textFieldExpression><![CDATA[$F{brojDatumOdlukeIzbora}]]></textFieldExpression>
+                <textFieldExpression><![CDATA[$F{broj_datum_odluke}]]></textFieldExpression>
             </textField>
             <textField>
                 <reportElement x="236" y="533" width="64" height="15" uuid="3b8a99e4-1471-4ddb-903e-df43d19ba595">
                     <property name="com.jaspersoft.studio.unit.height" value="px"/>
                     <property name="com.jaspersoft.studio.unit.y" value="px"/>
                 </reportElement>
-                <textFieldExpression><![CDATA[$F{iznosUgovoraBezPdf}]]></textFieldExpression>
+                <textFieldExpression><![CDATA[$F{iznos_ugovora_bez_pdf}]]></textFieldExpression>
             </textField>
             <textField>
                 <reportElement x="236" y="545" width="64" height="15" uuid="3c14a700-2470-43f5-89fc-5d0d5752273a">
                     <property name="com.jaspersoft.studio.unit.height" value="px"/>
                     <property name="com.jaspersoft.studio.unit.y" value="px"/>
                 </reportElement>
-                <textFieldExpression><![CDATA[$F{iznosUgovoraBezPdf}]]></textFieldExpression>
+                <textFieldExpression><![CDATA[$F{iznos_ugovora_bez_pdf}]]></textFieldExpression>
             </textField>
             <textField>
                 <reportElement x="270" y="650" width="220" height="15" uuid="604b143d-c126-4dad-9a5d-91c2f7a097e4">
                     <property name="com.jaspersoft.studio.unit.height" value="px"/>
                     <property name="com.jaspersoft.studio.unit.y" value="px"/>
                 </reportElement>
-                <textFieldExpression><![CDATA[$F{bankaRacun}]]></textFieldExpression>
+                <textFieldExpression><![CDATA[$F{banka_racun}]]></textFieldExpression>
             </textField>
             <textField>
                 <reportElement x="400" y="440" width="150" height="15" uuid="c4cf2a55-effb-4c20-bd00-b5cc44acacef">
@@ -241,13 +274,17 @@ Roba mora biti u paletama pakovanja sledećih dimenzija: dužina 120 cm, širina
                     <property name="com.jaspersoft.studio.unit.y" value="px"/>
                     <property name="com.jaspersoft.studio.unit.width" value="px"/>
                 </reportElement>
-                <textFieldExpression><![CDATA[$F{datumObjave}]]></textFieldExpression>
+                <textFieldExpression><![CDATA[$F{datum_objave}]]></textFieldExpression>
             </textField>
             <textField>
                 <reportElement x="193" y="160" width="126" height="15" uuid="d66bf8ef-debc-4603-9f63-95fe68a6ae94">
                     <property name="com.jaspersoft.studio.unit.height" value="px"/>
                 </reportElement>
-                <textFieldExpression><![CDATA[$F{adresaPonudjaca}]]></textFieldExpression>
+                <textFieldExpression><![CDATA[$F{adresa_ponudjaca}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="102" y="160" width="91" height="15" uuid="12d28035-6864-4f43-88d2-c290aeed68ab"/>
+                <textFieldExpression><![CDATA[$F{naziv_ponudjaca}]]></textFieldExpression>
             </textField>
         </band>
         <band height="800">
@@ -386,7 +423,7 @@ Ugovorne strane saglasno izjavljuju da su pročitale, razumjele i da ugovorne od
             </staticText>
             <textField>
                 <reportElement x="10" y="750" width="130" height="30" uuid="bb2cd7c7-894a-4228-8d13-4114cf783896"/>
-                <textFieldExpression><![CDATA[$F{odgovornoLice}]]></textFieldExpression>
+                <textFieldExpression><![CDATA[$F{odgovorno_lice_narucioca}]]></textFieldExpression>
             </textField>
         </band>
     </detail>
