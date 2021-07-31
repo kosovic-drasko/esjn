@@ -140,10 +140,15 @@
             </small>
           </div>
           <div *ngIf="languages && languages.length > 0">
-            <label for="langKey" jhiTranslate="settings.form.language">Language</label>
-            <select class="form-control" id="langKey" name="langKey" formControlName="langKey" data-cy="langKey">
-              <option *ngFor="let language of languages" [value]="language">{{ language | findLanguageFromKey }}</option>
-            </select>
+            <mat-form-field>
+              <mat-label jhiTranslate="settings.form.language">Language</mat-label>
+              <mat-select formControlName="langKey">
+                <mat-option *ngFor="let language of languages" [value]="language"
+                  >{{ language | findLanguageFromKey }}
+                  <!--                  {{ language.toString() }}-->
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
           </div>
 
           <button
