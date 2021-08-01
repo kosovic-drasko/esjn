@@ -48,8 +48,8 @@ spring:
     host: smtp.mailgun.org
     port: 587
 
-    username: postmaster@sandboxd58bae6286e54b89ae9ee0455fe0cb8d.mailgun.org #Replace this field with your Gmail username.
-    password: b8b46774fbaad12612b250f24f37be0f-a0cfb957-f826a048 #Replace this field with your Gmail password/App password.
+    username: postmaster@sandbox34888fac667a43c392427cd0c9c67a37.mailgun.org #Replace this field with your Gmail username.
+    password: 56adb4f9f264eae8c0eb0328d2379089-a0cfb957-441e8fa4 #Replace this field with your Gmail password/App password.
     protocol: smtp
   thymeleaf:
     cache: true
@@ -108,7 +108,7 @@ jhipster:
         token-validity-in-seconds: 86400
         token-validity-in-seconds-for-remember-me: 2592000
   mail: # specific JHipster mail property, for standard properties see MailProperties
-    base-url: https://tenderi.herokuapp.com # Modify according to your server's URL
+    base-url: https://mont-esjn.herokuapp.com # Modify according to your server's URL
   logging:
     use-json-format: false # By default, logs are not in Json format
     logstash: # Forward logs to logstash over a socket, used by LoggingConfiguration
