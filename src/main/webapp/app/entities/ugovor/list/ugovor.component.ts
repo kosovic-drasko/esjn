@@ -26,7 +26,6 @@ export class UgovorComponent implements AfterViewInit, OnChanges, OnInit {
   public displayedColumns = [
     'sifra postupka',
     'sifra ponude',
-    'sifra ponudjaca',
     'broj ugovora',
     'datum ugovora',
     'broj odluke',

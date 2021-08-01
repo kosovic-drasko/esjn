@@ -32,12 +32,11 @@
         public.naruclac.pdv
         FROM
         ugovor
-        INNER JOIN ponudjaci ON (ugovor.sifra_ponudjaca = ponudjaci.id)
         INNER JOIN postupci ON (ugovor.sifra_postupka = postupci.sifra_postupka)
         INNER JOIN ponude ON (ugovor.sifra_postupka = ponude.sifra_postupka)
-        AND (ugovor.sifra_ponude = ponude.sifra_ponude),
+        AND (ugovor.sifra_ponude = ponude.sifra_ponude)
+        INNER JOIN ponudjaci ON (ponude.sifra_ponudjaca = ponudjaci.id),
         public.naruclac
-
 
     </createView>
   </changeSet>
