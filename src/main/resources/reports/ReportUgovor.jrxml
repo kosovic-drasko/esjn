@@ -20,7 +20,7 @@
         <property name="com.jaspersoft.studio.field.label" value="banka_racun"/>
         <property name="com.jaspersoft.studio.field.tree.path" value="view_ugovor"/>
     </field>
-    <field name="datum_objave" class="java.time.LocalDate">
+    <field name="datum_objave" class="java.sql.Date">
         <property name="com.jaspersoft.studio.field.label" value="datum_objave"/>
         <property name="com.jaspersoft.studio.field.tree.path" value="view_ugovor"/>
     </field>
@@ -40,11 +40,11 @@
         <property name="com.jaspersoft.studio.field.label" value="broj_odluke"/>
         <property name="com.jaspersoft.studio.field.tree.path" value="view_ugovor"/>
     </field>
-    <field name="datum_odluke" class="java.time.LocalDate">
+    <field name="datum_odluke" class="java.sql.Date">
         <property name="com.jaspersoft.studio.field.label" value="datum_odluke"/>
         <property name="com.jaspersoft.studio.field.tree.path" value="view_ugovor"/>
     </field>
-    <field name="datum_ugovora" class="java.time.LocalDate">
+    <field name="datum_ugovora" class="java.sql.Date">
         <property name="com.jaspersoft.studio.field.label" value="datum_ugovora"/>
         <property name="com.jaspersoft.studio.field.tree.path" value="view_ugovor"/>
     </field>
@@ -64,7 +64,7 @@
         <property name="com.jaspersoft.studio.field.label" value="naziv_ponudjaca"/>
         <property name="com.jaspersoft.studio.field.tree.path" value="view_ugovor"/>
     </field>
-    <field name="datum_ponude" class="java.time.LocalDate">
+    <field name="datum_ponude" class="java.sql.Date">
         <property name="com.jaspersoft.studio.field.label" value="datum_ponude"/>
         <property name="com.jaspersoft.studio.field.tree.path" value="view_ugovor"/>
     </field>
@@ -104,6 +104,18 @@
         <property name="com.jaspersoft.studio.field.label" value="odgovorno_lice_narucioca"/>
         <property name="com.jaspersoft.studio.field.tree.path" value="view_ugovor"/>
     </field>
+    <field name="telefon" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="telefon"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="view_ugovor"/>
+    </field>
+    <field name="pib" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="pib"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="view_ugovor"/>
+    </field>
+    <field name="pdv" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="pdv"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="view_ugovor"/>
+    </field>
     <background>
         <band splitType="Stretch"/>
     </background>
@@ -121,7 +133,7 @@
 Zaključen između:
 
 
-1.	Naručioca Zdravstvene  ustanove Apoteke Crne Gore Montefarm, sa sjedištem u Podgorici, ul. Ljubljanska b.b., PIB: 02017105 , Broj računa : 510-205-07 , Naziv banke : CKB , koju zastupa direktor,Radoman Dragaš,dipl.ecc, ( u daljem tekstu Naručilac),
+1.	Naručioca                                                    , sa sjedištem u                                      , PIB:                     , Broj računa :                                                     , koju zastupa                                            , ( u daljem tekstu Naručilac),
 
      i
 
@@ -162,8 +174,8 @@ Za isporučene ljekove ( u daljem tekstu: roba),  koji su predmet ovog ugovora, 
 
 Faktura mora da sadrži broj ugovora po kojem se plaćanje vrši.
 
-Plaćanje će se vršiti na žiro račun Dobavljača broj:                                                                       , u rokovima predviđenim ponudom Dobavljača, virmanskim putem ili doznakom na račun Dobavljača.Valuta plaćanja je euro.
-
+Plaćanje će se vršiti na žiro račun Dobavljača broj:                                              u rokovima predviđenim ponudom Dobavljača, virmanskim putem ili doznakom na račun Dobavljača.Valuta plaćanja je euro.
+                                                                      ,
 
 
                                              III OBAVEZE UGOVORNIH STRANA
@@ -185,7 +197,7 @@ Roba mora biti u paletama pakovanja sledećih dimenzija: dužina 120 cm, širina
                 <textFieldExpression><![CDATA[$F{broj_ugovora}]]></textFieldExpression>
             </textField>
             <textField>
-                <reportElement x="330" y="160" width="220" height="15" uuid="4dc58d72-2468-479b-977c-d29b7c6d1f62">
+                <reportElement x="100" y="91" width="90" height="15" uuid="4dc58d72-2468-479b-977c-d29b7c6d1f62">
                     <property name="com.jaspersoft.studio.unit.height" value="px"/>
                     <property name="com.jaspersoft.studio.unit.y" value="px"/>
                     <property name="com.jaspersoft.studio.unit.width" value="px"/>
@@ -197,7 +209,7 @@ Roba mora biti u paletama pakovanja sledećih dimenzija: dužina 120 cm, širina
                     <property name="com.jaspersoft.studio.unit.height" value="px"/>
                     <property name="com.jaspersoft.studio.unit.y" value="px"/>
                 </reportElement>
-                <textFieldExpression><![CDATA[$F{odgovorno_lice_narucioca}]]></textFieldExpression>
+                <textFieldExpression><![CDATA[$F{odgovorno_lice}]]></textFieldExpression>
             </textField>
             <textField>
                 <reportElement x="380" y="300" width="164" height="15" uuid="12d0fa1d-6c7b-4cc2-92f8-4e27a826e030">
@@ -213,25 +225,11 @@ Roba mora biti u paletama pakovanja sledećih dimenzija: dužina 120 cm, širina
                 <textFieldExpression><![CDATA[$F{broj_datum_odluke}]]></textFieldExpression>
             </textField>
             <textField>
-                <reportElement x="102" y="323" width="88" height="15" uuid="dbcd3932-d858-4af6-aea0-dc5989571930">
+                <reportElement x="218" y="323" width="107" height="15" uuid="8743acd5-ce56-472d-912a-80fbafd52737">
                     <property name="com.jaspersoft.studio.unit.height" value="px"/>
-                    <property name="com.jaspersoft.studio.unit.y" value="px"/>
-                </reportElement>
-                <textFieldExpression><![CDATA[$F{naziv_ponudjaca}]]></textFieldExpression>
-            </textField>
-            <textField>
-                <reportElement x="210" y="323" width="115" height="15" uuid="8743acd5-ce56-472d-912a-80fbafd52737">
-                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
-                    <property name="com.jaspersoft.studio.unit.y" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.x" value="pixel"/>
                 </reportElement>
                 <textFieldExpression><![CDATA[$F{broj_datum_ponude}]]></textFieldExpression>
-            </textField>
-            <textField>
-                <reportElement x="200" y="416" width="70" height="15" uuid="b8de104f-b694-4b56-9d31-ecfa7fecf8b9">
-                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
-                    <property name="com.jaspersoft.studio.unit.y" value="px"/>
-                </reportElement>
-                <textFieldExpression><![CDATA[$F{datum_ponude}]]></textFieldExpression>
             </textField>
             <textField>
                 <reportElement x="170" y="428" width="90" height="15" uuid="bf3ed294-e1e3-4f88-8537-da7f6171e450">
@@ -262,19 +260,11 @@ Roba mora biti u paletama pakovanja sledećih dimenzija: dužina 120 cm, širina
                 <textFieldExpression><![CDATA[$F{iznos_ugovora_bez_pdf}]]></textFieldExpression>
             </textField>
             <textField>
-                <reportElement x="270" y="650" width="220" height="15" uuid="604b143d-c126-4dad-9a5d-91c2f7a097e4">
+                <reportElement x="270" y="648" width="140" height="15" uuid="604b143d-c126-4dad-9a5d-91c2f7a097e4">
                     <property name="com.jaspersoft.studio.unit.height" value="px"/>
                     <property name="com.jaspersoft.studio.unit.y" value="px"/>
                 </reportElement>
                 <textFieldExpression><![CDATA[$F{banka_racun}]]></textFieldExpression>
-            </textField>
-            <textField>
-                <reportElement x="400" y="440" width="150" height="15" uuid="c4cf2a55-effb-4c20-bd00-b5cc44acacef">
-                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
-                    <property name="com.jaspersoft.studio.unit.y" value="px"/>
-                    <property name="com.jaspersoft.studio.unit.width" value="px"/>
-                </reportElement>
-                <textFieldExpression><![CDATA[$F{datum_objave}]]></textFieldExpression>
             </textField>
             <textField>
                 <reportElement x="193" y="160" width="126" height="15" uuid="d66bf8ef-debc-4603-9f63-95fe68a6ae94">
@@ -283,8 +273,59 @@ Roba mora biti u paletama pakovanja sledećih dimenzija: dužina 120 cm, širina
                 <textFieldExpression><![CDATA[$F{adresa_ponudjaca}]]></textFieldExpression>
             </textField>
             <textField>
-                <reportElement x="102" y="160" width="91" height="15" uuid="12d28035-6864-4f43-88d2-c290aeed68ab"/>
+                <reportElement x="107" y="323" width="63" height="15" uuid="12d28035-6864-4f43-88d2-c290aeed68ab">
+                    <property name="com.jaspersoft.studio.unit.y" value="px"/>
+                </reportElement>
                 <textFieldExpression><![CDATA[$F{naziv_ponudjaca}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="330" y="91" width="120" height="15" uuid="c80aa8e0-bb6a-4594-905e-358a1a13c034">
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.y" value="px"/>
+                </reportElement>
+                <textFieldExpression><![CDATA[$F{odgovorno_lice_narucioca}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="330" y="160" width="140" height="15" uuid="be316750-e124-4223-b8b9-d669dfeae631">
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.y" value="px"/>
+                </reportElement>
+                <textFieldExpression><![CDATA[$F{banka_racun}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="107" y="160" width="91" height="15" uuid="671993d6-0f3b-4710-8408-218475dcc17f">
+                    <property name="com.jaspersoft.studio.unit.y" value="px"/>
+                </reportElement>
+                <textFieldExpression><![CDATA[$F{naziv_ponudjaca}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="112" y="78" width="153" height="15" uuid="83bf275b-8dc5-4f5e-acb1-94679d88368f">
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.y" value="px"/>
+                </reportElement>
+                <textFieldExpression><![CDATA[$F{naziv}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="350" y="78" width="100" height="15" uuid="851ffaa0-243a-4f1e-a2cd-7e82b18d616f">
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.y" value="px"/>
+                </reportElement>
+                <textFieldExpression><![CDATA[$F{adresa}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="503" y="78" width="64" height="15" uuid="1ccd525b-95f9-4df1-b12a-c9a5d41d0646">
+                    <property name="com.jaspersoft.studio.unit.y" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                </reportElement>
+                <textFieldExpression><![CDATA[$F{pib}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="193" y="418" width="77" height="15" uuid="f3b315a3-c1fd-40a5-87d6-1012f3268c01">
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.y" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+                </reportElement>
+                <textFieldExpression><![CDATA[$F{broj_datum_ponude}]]></textFieldExpression>
             </textField>
         </band>
         <band height="800">

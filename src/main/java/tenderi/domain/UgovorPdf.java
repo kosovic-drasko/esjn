@@ -46,6 +46,9 @@ public class UgovorPdf implements Serializable {
     @Column(name = "naziv")
     private String naziv;
 
+    @Column(name = "telefon")
+    private String telefon;
+
     @Column(name = "naziv_ponudjaca")
     private String naziv_ponudjaca;
 
@@ -85,11 +88,29 @@ public class UgovorPdf implements Serializable {
     @Column(name = "racun")
     private String racun;
 
+    @Column(name = "pib")
+    private String pib;
+
+    @Column(name = "pdv")
+    private String pdv;
+
     @Column(name = "datum_objave")
     private LocalDate datum_objave;
 
     @Column(name = "vrsta_postupka")
     private String vrsta_postupka;
+
+    public String getTelefon() {
+        return telefon;
+    }
+
+    public String getPib() {
+        return pib;
+    }
+
+    public String getPdv() {
+        return pdv;
+    }
 
     public Long getId() {
         return id;

@@ -26,7 +26,10 @@
         public.naruclac.naziv,
         public.naruclac.adresa,
         public.naruclac.racun,
-        public.naruclac.odgovorno_lice_narucioca
+        public.naruclac.odgovorno_lice_narucioca,
+        public.naruclac.telefon,
+        public.naruclac.pib,
+        public.naruclac.pdv
         FROM
         ugovor
         INNER JOIN ponudjaci ON (ugovor.sifra_ponudjaca = ponudjaci.id)
