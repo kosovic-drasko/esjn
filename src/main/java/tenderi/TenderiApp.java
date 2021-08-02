@@ -1,5 +1,17 @@
 package tenderi;
 
+import com.rabbitmq.client.Channel;
+import com.rabbitmq.client.Connection;
+import com.rabbitmq.client.ConnectionFactory;
+import com.rabbitmq.client.DeliverCallback;
+import java.io.IOException;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Optional;
+import java.util.concurrent.TimeoutException;
+import javax.annotation.PostConstruct;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,13 +24,6 @@ import tech.jhipster.config.DefaultProfileUtil;
 import tech.jhipster.config.JHipsterConstants;
 import tenderi.config.ApplicationProperties;
 
-import javax.annotation.PostConstruct;
-import java.net.InetAddress;
-import java.net.UnknownHostException;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Optional;
-
 @SpringBootApplication
 @EnableConfigurationProperties({ LiquibaseProperties.class, ApplicationProperties.class })
 public class TenderiApp {
@@ -27,8 +32,17 @@ public class TenderiApp {
 
     private final Environment env;
 
-    public TenderiApp(Environment env) {
+    public TenderiApp(Environment env) throws IOException, TimeoutException {
         this.env = env;
+        ConnectionFactory factory = new ConnectionFactory();
+        Connection connection = factory.newConnection();
+        Channel channel = connection.createChannel();
+
+        DeliverCallback deliverCallback = (consumerTag, delivery) -> {
+            String message = new String(delivery.getBody());
+            System.out.println("Message received = " + message);
+        };
+        channel.basicConsume("Queue-1", true, deliverCallback, consumerTag -> {});
     }
 
     /**

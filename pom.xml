@@ -104,6 +104,11 @@
 
     <dependencies>
         <dependency>
+            <groupId>com.rabbitmq</groupId>
+            <artifactId>amqp-client</artifactId>
+            <version>5.13.0</version>
+        </dependency>
+        <dependency>
             <groupId>net.sf.jasperreports</groupId>
             <artifactId>jasperreports-fonts</artifactId>
             <version>6.17.0</version>
