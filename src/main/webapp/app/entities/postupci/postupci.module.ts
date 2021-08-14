@@ -10,9 +10,19 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { FlexModule } from '@angular/flex-layout';
 import { JhMaterialModule } from '../../shared/jh-material.module';
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 @NgModule({
-  imports: [SharedModule, PostupciRoutingModule, MatTableModule, MatPaginatorModule, MatSortModule, FlexModule, JhMaterialModule],
+  imports: [
+    SharedModule,
+    PostupciRoutingModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
+    FlexModule,
+    JhMaterialModule,
+    MatSidenavModule,
+  ],
   declarations: [PostupciComponent, PostupciUpdateComponent, PostupciDeleteDialogComponent],
   entryComponents: [PostupciDeleteDialogComponent],
 })

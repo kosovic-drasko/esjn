@@ -34,15 +34,15 @@ public class TenderiApp {
 
     public TenderiApp(Environment env) throws IOException, TimeoutException {
         this.env = env;
-        ConnectionFactory factory = new ConnectionFactory();
-        Connection connection = factory.newConnection();
-        Channel channel = connection.createChannel();
-
-        DeliverCallback deliverCallback = (consumerTag, delivery) -> {
-            String message = new String(delivery.getBody());
-            System.out.println("Message received = " + message);
-        };
-        channel.basicConsume("Queue-1", true, deliverCallback, consumerTag -> {});
+        //        ConnectionFactory factory = new ConnectionFactory();
+        //        Connection connection = factory.newConnection();
+        //        Channel channel = connection.createChannel();
+        //
+        //        DeliverCallback deliverCallback = (consumerTag, delivery) -> {
+        //            String message = new String(delivery.getBody());
+        //            System.out.println("Message received = " + message);
+        //        };
+        //        channel.basicConsume("Queue-1", true, deliverCallback, consumerTag -> {});
     }
 
     /**

@@ -14,6 +14,7 @@ import { takeUntil } from 'rxjs/operators';
 export class HomeComponent implements OnInit, OnDestroy {
   account: Account | null = null;
   authSubscription?: Subscription;
+
   private readonly destroy$ = new Subject<void>();
   constructor(private accountService: AccountService, private router: Router) {}
 

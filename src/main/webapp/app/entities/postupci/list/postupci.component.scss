@@ -7,6 +7,17 @@ tr {
 table {
   width: 100%;
 }
+
+mat-sidenav {
+  height: 500px;
+}
+.example-events {
+  width: 300px;
+  height: 200px;
+  overflow: auto;
+  border: 1px solid #555;
+}
+
 //mat-button-toggle {
 //  background-color: green;
 //  color: white;

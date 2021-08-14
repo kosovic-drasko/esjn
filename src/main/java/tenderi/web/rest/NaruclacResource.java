@@ -1,5 +1,12 @@
 package tenderi.web.rest;
 
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.util.List;
+import java.util.Objects;
+import java.util.Optional;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
@@ -11,14 +18,6 @@ import tech.jhipster.web.util.ResponseUtil;
 import tenderi.domain.Naruclac;
 import tenderi.repository.NaruclacRepository;
 import tenderi.web.rest.errors.BadRequestAlertException;
-
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import java.net.URI;
-import java.net.URISyntaxException;
-import java.util.List;
-import java.util.Objects;
-import java.util.Optional;
 
 /**
  * REST controller for managing {@link Naruclac}.
@@ -171,6 +170,7 @@ public class NaruclacResource {
     @GetMapping("/naruclacs")
     public List<Naruclac> getAllNaruclacs() {
         log.debug("REST request to get all Naruclacs");
+        log.info("PROBA");
         return naruclacRepository.findAll();
     }
 
