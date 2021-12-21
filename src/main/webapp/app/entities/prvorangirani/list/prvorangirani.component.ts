@@ -48,7 +48,7 @@ export class PrvorangiraniComponent implements OnChanges, AfterViewInit {
   constructor(protected prvorangiraniService: PrvorangiraniService, protected ponudeService: PonudeService) {}
 
   public getAllPrvorangiraniPostupak(): void {
-    this.prvorangiraniService.findPostupak(4438).subscribe((res: IPrvorangirani[]) => {
+    this.prvorangiraniService.findPostupak(this.postupak).subscribe((res: IPrvorangirani[]) => {
       this.dataSource.data = res;
       this.prvorangiranis = res;
       this.getTotalCost();
