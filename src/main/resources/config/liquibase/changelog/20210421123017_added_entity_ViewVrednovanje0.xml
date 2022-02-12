@@ -9,8 +9,8 @@
     <!--
         Added the entity ViewVrednovanje.
     -->
-    <changeSet author="Drasko" id="view-vrednovanje0">
-        <createView catalogName="tenderi" schemaName="public" viewName="view_vrednovanje0">
+    <changeSet author="Drasko" id="view-vrednovanje-pregovaracki0">
+        <createView catalogName="tenderi" schemaName="public" viewName="viewvrednovanjepregovaracki0">
             SELECT
             ponude.id,
             ponude.sifra_postupka,

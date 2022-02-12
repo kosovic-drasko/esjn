@@ -31,5 +31,7 @@
     <include file="config/liquibase/changelog/20210716070916_added_entity_Naruclac.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/create-view-view_ugovori.xml" relativeToChangelogFile="false"/>
 
+    <include file="config/liquibase/changelog/20210421123017_added_entity_ViewVrednovanje0.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210421123017_added_entity_ViewVrednovanjePregovaracki.xml" relativeToChangelogFile="false"/>
 
 </databaseChangeLog>
