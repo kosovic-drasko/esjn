@@ -43,7 +43,7 @@
     "devServerPort": 4200,
     "clientPackageManager": "npm",
     "languages": ["sr", "en"],
-    "herokuAppName": "cejn-mont",
+    "herokuAppName": null,
     "herokuDeployType": "git",
     "herokuJavaVersion": "11"
   }
