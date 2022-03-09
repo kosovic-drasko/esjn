@@ -42,6 +42,9 @@
     "jwtSecretKey": "ZDFlN2M1YmJlZTg4ZjQzZmRkY2E0YWM0YjYyNzNhNmVmMDU2NTQ3NjQxOWFkNzY4NWEyYjJlMzY1ZDE3NDhlNWIwOTExZTA1M2JhMTJmZTIxMDg1MDg4ZDliYzFhODFhMTMwMzBlMDliNGYxOTM2MjgxYTJjMWYwNTk4MjRhNWU=",
     "devServerPort": 4200,
     "clientPackageManager": "npm",
-    "languages": ["sr", "en"]
+    "languages": ["sr", "en"],
+    "herokuAppName": "secure-coast-46771",
+    "herokuDeployType": "git",
+    "herokuJavaVersion": "11"
   }
 }
