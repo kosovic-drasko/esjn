@@ -12,7 +12,7 @@
 
 eureka:
   instance:
-    hostname: tenderi.herokuapp.com
+    hostname: cejn.herokuapp.com
     non-secure-port: 80
     prefer-ip-address: false
 
