@@ -33,7 +33,7 @@
                 <constraints nullable="true" />
             </column>
             <column name="trazena_kolicina" type="integer">
-                <constraints nullable="false" />
+                <constraints nullable="true" />
             </column>
             <column name="pakovanje" type="varchar(255)">
                 <constraints nullable="true" />
