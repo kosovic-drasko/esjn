@@ -43,7 +43,7 @@
     "devServerPort": 4200,
     "clientPackageManager": "npm",
     "languages": ["sr", "en"],
-    "herokuAppName": "secure-coast-46771",
+    "herokuAppName": "esjn",
     "herokuDeployType": "git",
     "herokuJavaVersion": "11"
   }
