@@ -1,5 +1,12 @@
 package tenderi.web.rest;
 
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.util.List;
+import java.util.Objects;
+import java.util.Optional;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
@@ -11,14 +18,6 @@ import tech.jhipster.web.util.ResponseUtil;
 import tenderi.domain.Ponude;
 import tenderi.repository.PonudeRepository;
 import tenderi.web.rest.errors.BadRequestAlertException;
-
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import java.net.URI;
-import java.net.URISyntaxException;
-import java.util.List;
-import java.util.Objects;
-import java.util.Optional;
 
 /**
  * REST controller for managing {@link Ponude}.
@@ -217,14 +216,13 @@ public class PonudeResource {
     public void deletePonudeSifra(@PathVariable Integer sifraPonude) {
         ponudeRepository.deletePonudeSifraPonude(sifraPonude);
     }
+    //    @DeleteMapping("/ponude/delete/selected")
+    //    public void delete() {
+    //        ponudeRepository.deleteBySelected();
+    //    }
 
-    @DeleteMapping("/ponude/delete/selected")
-    public void delete() {
-        ponudeRepository.deleteBySelected();
-    }
-
-    @PutMapping("/ponude/update/selected/{id}")
-    public void updatePonude(@PathVariable("id") Long id) {
-        ponudeRepository.updateSlected(id);
-    }
+    //    @PutMapping("/ponude/update/selected/{id}")
+    //    public void updatePonude(@PathVariable("id") Long id) {
+    //        ponudeRepository.updateSlected(id);
+    //    }
 }

@@ -68,8 +68,7 @@ public class ExcelUtils {
                 row.createCell(5).setCellValue(ponudes.getZasticeniNaziv());
                 row.createCell(6).setCellValue(ponudes.getPonudjenaVrijednost());
                 row.createCell(7).setCellValue(ponudes.getRokIsporuke());
-                row.createCell(8).setCellValue(ponudes.getDatumPonude());
-                row.createCell(9).setCellValue(ponudes.getSifraPonudjaca());
+                row.createCell(8).setCellValue(ponudes.getSifraPonudjaca());
             }
 
             workbook.write(out);
@@ -130,9 +129,6 @@ public class ExcelUtils {
                             ponude.setRokIsporuke((int) currentCell.getNumericCellValue());
                             break;
                         case 8:
-                            ponude.setDatumPonude(currentCell.getLocalDateTimeCellValue().toLocalDate());
-                            break;
-                        case 9:
                             ponude.setSifraPonudjaca((int) currentCell.getNumericCellValue());
                             break;
                         default:

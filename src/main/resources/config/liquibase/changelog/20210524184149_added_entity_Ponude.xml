@@ -32,15 +32,11 @@
             <column name="rok_isporuke" type="integer">
                 <constraints nullable="false" />
             </column>
-            <column name="datum_ponude" type="date">
-                <constraints nullable="true" />
-            </column>
+
             <column name="sifra_ponudjaca" type="integer">
                 <constraints nullable="false" />
             </column>
-            <column name="selected" type="boolean">
-                <constraints nullable="true" />
-            </column>
+
         </createTable>
     </changeSet>
 
