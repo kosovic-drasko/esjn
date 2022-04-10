@@ -1,8 +1,8 @@
 package tenderi.domain;
 
+import java.io.Serializable;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
-import java.io.Serializable;
 
 /**
  * A Specifikacije.
@@ -81,6 +81,42 @@ public class Specifikacije implements Serializable {
     public Specifikacije sifraPostupka(Integer sifraPostupka) {
         this.sifraPostupka = sifraPostupka;
         return this;
+    }
+
+    @Override
+    public String toString() {
+        return (
+            "Specifikacije{" +
+            "id=" +
+            id +
+            ", sifraPostupka=" +
+            sifraPostupka +
+            ", brojPartije=" +
+            brojPartije +
+            ", atc='" +
+            atc +
+            '\'' +
+            ", inn='" +
+            inn +
+            '\'' +
+            ", farmaceutskiOblikLijeka='" +
+            farmaceutskiOblikLijeka +
+            '\'' +
+            ", jacinaLijeka='" +
+            jacinaLijeka +
+            '\'' +
+            ", trazenaKolicina=" +
+            trazenaKolicina +
+            ", pakovanje='" +
+            pakovanje +
+            '\'' +
+            ", jedinicaMjere='" +
+            jedinicaMjere +
+            '\'' +
+            ", procijenjenaVrijednost=" +
+            procijenjenaVrijednost +
+            '}'
+        );
     }
 
     public void setSifraPostupka(Integer sifraPostupka) {
@@ -208,22 +244,5 @@ public class Specifikacije implements Serializable {
     public int hashCode() {
         // see https://vladmihalcea.com/how-to-implement-equals-and-hashcode-using-the-jpa-entity-identifier/
         return getClass().hashCode();
-    }
-
-    // prettier-ignore
-    @Override
-    public String toString() {
-        return "Specifikacije{" +
-            "id=" + getId() +
-            ", sifraPostupka=" + getSifraPostupka() +
-            ", brojPartije=" + getBrojPartije() +
-            ", atc='" + getAtc() + "'" +
-            ", inn='" + getInn() + "'" +
-            ", farmaceutskiOblikLijeka='" + getFarmaceutskiOblikLijeka() + "'" +
-            ", jacinaLijeka='" + getJacinaLijeka() + "'" +
-            ", trazenaKolicina=" + getTrazenaKolicina() +
-            ", pakovanje='" + getPakovanje() + "'" +
-            ", procijenjenaVrijednost=" + getProcijenjenaVrijednost() +
-            "}";
     }
 }
