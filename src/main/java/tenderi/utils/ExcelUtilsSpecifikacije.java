@@ -1,10 +1,5 @@
 package tenderi.utils;
 
-import org.apache.poi.ss.usermodel.*;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import org.springframework.web.multipart.MultipartFile;
-import tenderi.domain.Specifikacije;
-
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -12,6 +7,10 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import org.apache.poi.ss.usermodel.*;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.springframework.web.multipart.MultipartFile;
+import tenderi.domain.Specifikacije;
 
 public class ExcelUtilsSpecifikacije {
 
@@ -63,15 +62,15 @@ public class ExcelUtilsSpecifikacije {
 
                 row.createCell(0).setCellValue(specifikacijes.getId());
                 row.createCell(1).setCellValue(specifikacijes.getSifraPostupka());
-                row.createCell(3).setCellValue(specifikacijes.getBrojPartije());
-                row.createCell(4).setCellValue(specifikacijes.getAtc());
-                row.createCell(5).setCellValue(specifikacijes.getInn());
-                row.createCell(6).setCellValue(specifikacijes.getFarmaceutskiOblikLijeka());
-                row.createCell(7).setCellValue(specifikacijes.getJacinaLijeka());
-                row.createCell(8).setCellValue(specifikacijes.getTrazenaKolicina());
-                row.createCell(9).setCellValue(specifikacijes.getPakovanje());
-                row.createCell(10).setCellValue(specifikacijes.getJedinicaMjere());
-                row.createCell(11).setCellValue(specifikacijes.getProcijenjenaVrijednost());
+                row.createCell(2).setCellValue(specifikacijes.getBrojPartije());
+                row.createCell(3).setCellValue(specifikacijes.getAtc());
+                row.createCell(4).setCellValue(specifikacijes.getInn());
+                row.createCell(5).setCellValue(specifikacijes.getFarmaceutskiOblikLijeka());
+                row.createCell(6).setCellValue(specifikacijes.getJacinaLijeka());
+                row.createCell(7).setCellValue(specifikacijes.getTrazenaKolicina());
+                row.createCell(8).setCellValue(specifikacijes.getPakovanje());
+                row.createCell(9).setCellValue(specifikacijes.getJedinicaMjere());
+                row.createCell(10).setCellValue(specifikacijes.getProcijenjenaVrijednost());
             }
 
             workbook.write(out);
