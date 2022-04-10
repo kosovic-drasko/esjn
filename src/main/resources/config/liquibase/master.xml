@@ -21,16 +21,13 @@
     <include file="config/liquibase/changelog/20210524184152_added_entity_Specifikacije.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20210421123017_added_entity_ViewVrednovanje0.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20210421123017_added_entity_ViewVrednovanje.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20210529051416_added_entity_Ugovor.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/create-view-maximalni_bod.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/create-view-prvorangirani.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/create-view-view_ponude.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/create-view-view_ponudjaci_ponude.xml" relativeToChangelogFile="false"/>
 
-    <include file="config/liquibase/changelog/create-view-anex.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20210716070916_added_entity_Naruclac.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/create-view-view_ugovori.xml" relativeToChangelogFile="false"/>
 
-    <include file="config/liquibase/changelog/20210421123017_added_entity_ViewVrednovanje0.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210716070916_added_entity_Naruclac.xml" relativeToChangelogFile="false"/>
+     <include file="config/liquibase/changelog/20210421123017_added_entity_ViewVrednovanje0.xml" relativeToChangelogFile="false"/>
 
 </databaseChangeLog>

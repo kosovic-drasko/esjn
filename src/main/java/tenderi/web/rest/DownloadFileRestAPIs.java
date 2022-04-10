@@ -7,13 +7,13 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
-import tenderi.service.ExcelFileServices;
+import tenderi.service.ExcelFileServicesPonude;
 
 @RestController
 public class DownloadFileRestAPIs {
 
     @Autowired
-    ExcelFileServices fileServices;
+    ExcelFileServicesPonude fileServices;
 
     /*
      * Download Files

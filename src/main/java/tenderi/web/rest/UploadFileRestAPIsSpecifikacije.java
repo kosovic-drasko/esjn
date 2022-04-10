@@ -1,5 +1,7 @@
 package tenderi.web.rest;
 
+import java.util.Arrays;
+import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -8,10 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 import tenderi.Message;
 import tenderi.service.ExcelFileServicesSpecifikacije;
-import tenderi.utils.ExcelUtils;
-
-import java.util.Arrays;
-import java.util.stream.Collectors;
+import tenderi.utils.ExcelUtilsSpecifikacije;
 
 @RestController
 public class UploadFileRestAPIsSpecifikacije {
@@ -34,7 +33,7 @@ public class UploadFileRestAPIsSpecifikacije {
 
         String notExcelFiles = Arrays
             .stream(uploadfiles)
-            .filter(x -> !ExcelUtils.isExcelFile(x))
+            .filter(x -> !ExcelUtilsSpecifikacije.isExcelFile(x))
             .map(x -> x.getOriginalFilename())
             .collect(Collectors.joining(" , "));
 

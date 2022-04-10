@@ -1,4 +1,3 @@
-import { Data } from '@angular/router';
 export interface IPonude {
   id?: number;
   sifraPostupka?: number;
@@ -9,7 +8,6 @@ export interface IPonude {
   zasticeniNaziv?: string | null;
   ponudjenaVrijednost?: number;
   rokIsporuke?: number;
-  datumPonude?: Data;
 }
 export class Ponude implements IPonude {
   constructor(
@@ -21,8 +19,7 @@ export class Ponude implements IPonude {
     public nazivProizvodjaca?: string | null,
     public zasticeniNaziv?: string | null,
     public ponudjenaVrijednost?: number,
-    public rokIsporuke?: number,
-    public datumPonude?: Data
+    public rokIsporuke?: number
   ) {}
 }
 

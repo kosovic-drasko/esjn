@@ -1,5 +1,7 @@
 package tenderi.web.rest;
 
+import java.util.Arrays;
+import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -7,17 +9,14 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 import tenderi.Message;
-import tenderi.service.ExcelFileServices;
-import tenderi.utils.ExcelUtils;
-
-import java.util.Arrays;
-import java.util.stream.Collectors;
+import tenderi.service.ExcelFileServicesPonude;
+import tenderi.utils.ExcelUtilsPonude;
 
 @RestController
 public class UploadFileRestAPIs {
 
     @Autowired
-    ExcelFileServices fileServices;
+    ExcelFileServicesPonude fileServices;
 
     @PostMapping("/api/uploadfiles")
     public Message uploadFileMulti(@RequestParam("uploadfiles") MultipartFile[] uploadfiles) {
@@ -34,7 +33,7 @@ public class UploadFileRestAPIs {
 
         String notExcelFiles = Arrays
             .stream(uploadfiles)
-            .filter(x -> !ExcelUtils.isExcelFile(x))
+            .filter(x -> !ExcelUtilsPonude.isExcelFile(x))
             .map(x -> x.getOriginalFilename())
             .collect(Collectors.joining(" , "));
 

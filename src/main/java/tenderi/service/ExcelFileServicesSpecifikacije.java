@@ -1,16 +1,14 @@
 package tenderi.service;
 
-
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 import tenderi.domain.Specifikacije;
 import tenderi.repository.SpecifikacijeRepository;
 import tenderi.utils.ExcelUtilsSpecifikacije;
-
-import java.io.ByteArrayInputStream;
-import java.io.IOException;
-import java.util.List;
 
 @Service
 public class ExcelFileServicesSpecifikacije {
@@ -29,7 +27,7 @@ public class ExcelFileServicesSpecifikacije {
         }
     }
 
-//     Load Data to Excel File
+    //     Load Data to Excel File
     public ByteArrayInputStream loadFile() {
         List<Specifikacije> specifikacije = (List<Specifikacije>) specifikacijeRepository.allSpecifikacije();
 

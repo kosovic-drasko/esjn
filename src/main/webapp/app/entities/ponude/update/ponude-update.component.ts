@@ -40,7 +40,6 @@ export class PonudeUpdateComponent implements OnInit {
       zasticeniNaziv,
       ponudjenaVrijednost,
       rokIsporuke,
-      datumPonude,
       name,
     }: any
   ) {
@@ -54,7 +53,6 @@ export class PonudeUpdateComponent implements OnInit {
       zasticeniNaziv: [zasticeniNaziv],
       ponudjenaVrijednost: [ponudjenaVrijednost, [Validators.required]],
       rokIsporuke: [rokIsporuke, [Validators.required]],
-      datumPonude: [datumPonude],
     });
     this.aktivno = name;
   }
@@ -107,7 +105,6 @@ export class PonudeUpdateComponent implements OnInit {
       nazivProizvodjaca: this.editForm.get(['nazivProizvodjaca'])!.value,
       zasticeniNaziv: this.editForm.get(['zasticeniNaziv'])!.value,
       ponudjenaVrijednost: this.editForm.get(['ponudjenaVrijednost'])!.value,
-      datumPonude: this.editForm.get(['datumPonude'])!.value,
       rokIsporuke: this.editForm.get(['rokIsporuke'])!.value,
     };
   }

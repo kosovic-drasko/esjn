@@ -41,7 +41,6 @@ export class PonudeComponent implements AfterViewInit, OnChanges {
     'zasticeni naziv',
     'ponudjena vrijednost',
     'rok isporuke',
-    'datum ponude',
     'edit',
     'delete selected',
     'select',
@@ -85,8 +84,7 @@ export class PonudeComponent implements AfterViewInit, OnChanges {
     nazivProizvodjaca?: string | null,
     zasticeniNaziv?: string | null,
     ponudjenaVrijednost?: number,
-    rokIsporuke?: number,
-    datumPonude?: Data
+    rokIsporuke?: number
   ): any {
     const dialogRef = this.dialog.open(PonudeUpdateComponent, {
       data: {
@@ -99,7 +97,7 @@ export class PonudeComponent implements AfterViewInit, OnChanges {
         zasticeniNaziv,
         ponudjenaVrijednost,
         rokIsporuke,
-        datumPonude,
+
         name: (this.aktivno = true),
       },
     });

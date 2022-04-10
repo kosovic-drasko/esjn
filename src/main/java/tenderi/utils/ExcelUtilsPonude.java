@@ -8,12 +8,11 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import org.apache.poi.ss.usermodel.*;
-import org.apache.poi.ss.usermodel.Font;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.springframework.web.multipart.MultipartFile;
 import tenderi.domain.Ponude;
 
-public class ExcelUtils {
+public class ExcelUtilsPonude {
 
     public static String EXCELTYPE = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
 
@@ -27,7 +26,6 @@ public class ExcelUtils {
             "Zasticeni Naziv",
             "Ponudjena Vrijednost",
             "Rok Isporuke",
-            "Datum Ponude",
             "Sifra Ponudjaca",
         };
         try (Workbook workbook = new XSSFWorkbook(); ByteArrayOutputStream out = new ByteArrayOutputStream();) {
@@ -131,6 +129,12 @@ public class ExcelUtils {
                         case 8:
                             ponude.setSifraPonudjaca((int) currentCell.getNumericCellValue());
                             break;
+                        //                        case 10:
+                        //                            ponude.setSelected(currentCell.getBooleanCellValue());
+                        //                            break;
+                        //                        case 11:
+                        //                            ponude.setPonudjaci()(currentCell.getNumericCellValue());
+                        //                            break;
                         default:
                             break;
                     }

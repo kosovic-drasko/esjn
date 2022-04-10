@@ -1,9 +1,9 @@
 package tenderi.domain;
 
-import javax.persistence.*;
-import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.time.LocalDate;
+import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 
 /**
  * A Ponude.
@@ -51,12 +51,6 @@ public class ViewPonude implements Serializable {
     @Column(name = "rok_isporuke", nullable = false)
     private Integer rokIsporuke;
 
-    @Column(name = "selected")
-    private Boolean selected;
-
-    @Column(name = "datum_ponude", nullable = true)
-    private LocalDate datumPonude;
-
     public Long getId() {
         return id;
     }
@@ -95,13 +89,5 @@ public class ViewPonude implements Serializable {
 
     public Integer getRokIsporuke() {
         return rokIsporuke;
-    }
-
-    public Boolean getSelected() {
-        return selected;
-    }
-
-    public LocalDate getDatumPonude() {
-        return datumPonude;
     }
 }

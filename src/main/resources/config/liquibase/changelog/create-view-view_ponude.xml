@@ -11,8 +11,6 @@
         ponude.zasticeni_naziv,
         ponude.ponudjena_vrijednost,
         ponude.rok_isporuke,
-        ponude.selected,
-        ponude.datum_ponude,
         ponudjaci.naziv_ponudjaca
         FROM ponude
         JOIN ponudjaci ON ponude.sifra_ponudjaca = ponudjaci.id;
